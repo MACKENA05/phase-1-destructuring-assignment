@@ -1,5 +1,15 @@
 const farmAnimals = 'cow horse sheep pig chicken';
 
+
+// Map the animals to their corresponding sounds
+const animalSounds = {
+  cow: 'moo',
+  horse: 'neigh',
+  sheep: 'baa',
+  pig: 'oink',
+  chicken: 'cluck'
+};
+
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 const muppet = {
@@ -24,6 +34,38 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+
+const [cow, horse, sheep, pig, chicken] = farmAnimals.split(' ');
+const[moo, neigh, baa, oink, cluck] = [cow, horse, sheep, pig, chicken]
+
+// using  destructuring to declare the four traditional animal names
+const animals = 'cow horse sheep pig chicken'.split(' ').filter(animal => animal !== 'horse');
+const [bessie, dolly, babe, little] = animals;
+
+//using destructuring to declare the three traditional animal colors
+const [blackAndWhite, black, pink] = ['cow', 'sheep', 'pig'];
+
+// using destructuring to declare six rainbow color variables using initials
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+
+//using destructuring to declare six rainbow color variables using initials
+const [r,o,y,g,b,i,v] = colors;
+
+//using destructuring to declare Indigo using indgconst 
+const [,,,,,indg] = colors;
+
+//using destructuring to assign all appropriate variables using the keys as the variable names
+const { muppetName, color, song, job, partner } = muppet;
+
+ //using destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+ const {album:{theMuppetMovie:{song2,song4}},nestedJob ,nestedPartner} = nestedMuppet
+
+
+
+
+
+
 
 // Strings
 
